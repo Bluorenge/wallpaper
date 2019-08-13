@@ -1,0 +1,223 @@
+.special {
+  @include respond-to(desktop) {
+    padding-bottom: 100px;
+    background-color: #fdfcef;
+    overflow: hidden;
+  }
+
+  &__wrap {
+    @include respond-to(desktop) {
+      position: relative;
+      max-width: 1040px;
+      padding-top: 90px;
+      padding-left: 100px;
+      padding-bottom: 100px;
+      margin: auto;
+      background-color: #ffffff;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        background-color: #ffffff;
+        width: 9999px;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__content {
+    @include respond-to(desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 780px;
+      margin: auto;
+      margin-bottom: 85px;
+    }
+  }
+
+  &__gallery {
+    @include respond-to(desktop) {
+      display: flex;
+      width: 50%;
+    }
+  }
+
+  &__desc {
+    @include respond-to(desktop) {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__gallery-col {
+    @include respond-to(desktop) {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-right: 5px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__img {
+    @include respond-to(desktop) {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__num {
+    @include respond-to(desktop) {
+      position: relative;
+      width: 30px;
+      height: 25px;
+      background-color: #bfaf7a;
+      color: #ffffff;
+      font-size: 20px;
+      font-family: "VogueHighline", serif;
+      text-align: center;
+      z-index: 2;
+      margin-bottom: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -130px;
+        width: 290px;
+        height: 2px;
+        background-color: #bfaf7a;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__name-wallpaper {
+    @include respond-to(desktop) {
+      display: block;
+      margin-bottom: 10px;
+      font-family: "VogueHighline", serif;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__manufacturer {
+    @include respond-to(desktop) {
+      color: #666666;
+      margin-bottom: 25px;
+      font-family: "VogueHighline", serif;
+      font-size: 16px;
+    }
+  }
+
+  &__desc-text {
+    @include respond-to(desktop) {
+      width: 330px;
+      margin-bottom: 25px;
+      font-weight: 100;
+    }
+  }
+
+  &__warranty {
+    @include respond-to(desktop) {
+      width: 265px;
+      height: 30px;
+      margin-bottom: 30px;
+      line-height: 26px;
+      color: #bfaf7a;
+      border: 1px solid #bfaf7a;
+      font-family: "VogueHighline", serif;
+      font-size: 20px;
+    }
+  }
+
+  &__price {
+    @include respond-to(desktop) {
+      margin-bottom: 10px;
+      font-family: "VogueHighline", serif;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__footnote {
+    @include respond-to(desktop) {
+      font-weight: 100;
+      font-size: 14px;
+    }
+  }
+
+  &__input {
+    @include respond-to(desktop) {
+      padding-left: 30px;
+    }
+  }
+
+  &__btn {
+    @include respond-to(desktop) {
+      padding-left: 30px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__form {
+    @include respond-to(desktop) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-top: 45px;
+      padding-bottom: 35px;
+      padding-left: 35px;
+      padding-right: 35px;
+      margin-left: auto;
+      margin-right: 18px;
+      margin-bottom: -18px;
+      border: 1px solid #bfaf7a;
+      border-radius: 20px;
+      z-index: 10;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: -14px;
+        height: 183px;
+        width: 940px;
+        border: 1px solid #bfaf7a;
+        border-radius: 20px;
+        z-index: -1;
+      }
+
+      &::after {
+        left: -7px;
+      }
+    }
+  }
+
+  &__form-action {
+    @include respond-to(desktop) {
+      display: block;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+}

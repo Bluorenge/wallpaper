@@ -1,3 +1,107 @@
+.contacts {
+  @include respond-to(desktop) {
+    background-color: #fdfcef;
+    overflow: hidden;
+  }
 
-@mixin respond-to ($device) {
+  &__wrap {
+    @include respond-to(desktop) {
+      position: relative;
+      max-width: 1040px;
+      padding-top: 90px;
+      padding-left: 100px;
+      padding-bottom: 100px;
+      margin: auto;
+      margin-bottom: 100px;
+      background-color: #ffffff;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        background-color: #ffffff;
+        width: 9999px;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__list {
+    @include respond-to(desktop) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__row {
+    @include respond-to(desktop) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--marker::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -2px;
+      width: 23px;
+      height: 33px;
+      background-image: url(../img/icon/pin-contacts.png);
+    }
+
+    &--phone::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 25px;
+      height: 27px;
+      background-image: url(../img/icon/phone-contacts.png);
+    }
+
+    @include respond-to(desktop) {
+      width: 33%;
+      margin-right: 50px;
+      padding-left: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__map {
+    position: relative;
+		height: 200px;
+    background: url(../img/map.jpg) 100% 100% no-repeat;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+          -180deg,
+          #fdfcef 0%,
+          rgba(253, 252, 239, 0) 50%
+        ),
+        linear-gradient(180deg, rgba(253, 252, 239, 0) 80%, #fdfcef 100%);
+    }
+    @include respond-to(desktop) {
+			height: 758px;
+    }
+  }
 }

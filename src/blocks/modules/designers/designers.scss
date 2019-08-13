@@ -1,62 +1,176 @@
 .designers {
   @include respond-to(desktop) {
-    padding-bottom: 100px;
-		background-color: #fdfcef;
-		overflow: hidden;
-  }
+    background-color: #fdfcef;
+    overflow: hidden;
+	}	
 
-  &__wrap {
+	&__title-wrap,
+	&__content-wrap {
     @include respond-to(desktop) {
-      max-width: 1040px;
-      padding-left: 100px;
-      padding-bottom: 215px;
+      position: relative;
+      max-width: 1080px;
       margin: auto;
     }
+  }
+
+  &__content-wrap {
+    @include respond-to(desktop) {
+      display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			justify-content: space-around;
+			max-width: 1030px;
+			padding-top: 150px;
+			padding-bottom: 215px;
+    }
 	}
+	
+	&__content {
+    @include respond-to(desktop) {
+			background: url(../img/designers/designers-bg.jpg) 100% 100% no-repeat;
+			background-size: cover;
+			background-position: center;
+    }
+  }
 
   &__img-wrap {
-		position: relative;
+    position: relative;
 
     @include respond-to(desktop) {
+			margin-bottom: -4px;
+      &:first-child {
+        margin-right: 280px;
+      }
     }
-	}
+  }
 
-	&__blockquote {
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 15px;
-		width: 280px;
-		height: 87px;
-		background-color: #ffffff;
-		font-family: "VogueHighline", serif;
-		font-size: 14px;
-		text-align: right;
-
-		@include respond-to(desktop) {
+  &__blockquote {
+    @include respond-to(desktop) {
+      position: absolute;
+			top: -40px;
+      left: -63px;
+      padding: 15px;
+      width: 275px;
+      height: 87px;
+			background-color: #ffffff;
+			font-style: italic;
+      font-size: 14px;
+      text-align: right;
     }
-	}
+  }
+
+  &__img-wrap:nth-last-of-type(2) &__blockquote {
+    @include respond-to(desktop) {
+			left: 65px;
+			text-align: start;
+    }
+  }
 
   &__desc {
     @include respond-to(desktop) {
-			width: 380px;
+      position: absolute;
+      bottom: 275px;
+      z-index: 1;
+      width: 380px;
+      padding: 15px;
+			background-color: #ffffff;
+			box-shadow: 16px 10px 25px 2px rgba(0, 0, 1, 0.14);
+    }
+  }
 
+  &__desc-wrap {
+    @include respond-to(desktop) {
+      padding: 40px 0;
+      border: 1px solid #6b6b6b;
+      background-color: #ffffff;
+    }
+  }
+
+  &__title {
+    @include respond-to(desktop) {
+      position: relative;
+      width: 220px;
+      margin: auto;
+      margin-bottom: 35px;
+      font-family: "VogueHighline", serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -18px;
+        left: 40px;
+        width: 145px;
+        height: 1px;
+        background-color: #000000;
+      }
+    }
+  }
+
+  &__text {
+    width: 250px;
+    margin: auto;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+
+    @include respond-to(desktop) {
+    }
+  }
+
+  &__row {
+    @include respond-to(desktop) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 72px;
+			background-color: #ffffff;
     }
 	}
-
-	&__wrap {
+	
+  &__row-left {
+    @include respond-to(desktop) {
+			display: flex;
+			align-items: center;
+			padding-right: 25px;
+			border-right: 1px solid #000000;
+    }
+	}
+	
+  &__row-right {
 		@include respond-to(desktop) {
-			
+			display: flex;
+			align-items: center;
+			padding-left: 25px;
+    }
+	}
+	
+  &__designer-desc {
+    @include respond-to(desktop) {
+			width: 145px;
+			font-size: 12px;
+			font-weight: 100;
+			text-align: right;
+			margin-right: 15px;
     }
 	}
 
-  &__title-wrap {
-    @include respond-to(desktop) {
+	&__row-right &__designer-desc {
+		@include respond-to(desktop) {
+			text-align: left;
+			margin-right: 0;
+			margin-left: 15px;
     }
 	}
-
-  &__title-wrap {
+	
+  &__designer-name {
     @include respond-to(desktop) {
+			font-family: "VogueHighline", serif;
+			font-size: 22px;
+			text-transform: uppercase;
     }
-	}
+  }
 }

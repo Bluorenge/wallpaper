@@ -24,7 +24,18 @@
 			width: 69%;
 			height: 100%;
 			z-index: -1;
-			background-color: #f6efd8;
+      background-color: #f6efd8;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -130px;
+        left: 0;
+        height: 130px;
+        width: 100%;
+        z-index: -1;
+        background-color: #f6efd8;
+      }
 		}
   }
 

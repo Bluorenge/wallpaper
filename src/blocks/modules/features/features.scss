@@ -9,6 +9,7 @@
 		margin: auto;
 		margin-bottom: 15px;
     box-shadow: 0px 0px 15.36px 0.64px rgba(0, 0, 1, 0.08);
+    background: #ffffff;
 	}
 	
 	&__title-wrap {
@@ -33,15 +34,11 @@
       width: 190px;
       height: 93px;
       margin-bottom: 90px;
+      z-index: 10;
 
       &:nth-child(1) {
         margin-right: 260px;
         margin-left: 85px;
-        z-index: 10;
-      }
-
-      &:nth-child(2) {
-        z-index: 10;
       }
 
       &:nth-child(3) {
@@ -74,15 +71,16 @@
       &--img {
         top: -120px;
         left: -10px;
+        z-index: 9;
 
         &::before {
           content: "";
           position: absolute;
           right: -252px;
-          top: -53px;
+          top: -45px;
           width: 430px;
           height: 430px;
-          z-index: -2;
+          z-index: -1;
           border-radius: 430px;
           background: linear-gradient(
             to bottom,
@@ -96,7 +94,7 @@
 
       &-img-wrap {
         width: 190px;
-        padding: 50px 70px;
+        padding: 70px;
         margin-left: 60px;
         margin-right: 45px;
         border: 2px solid #f4eed9;
@@ -113,7 +111,7 @@
 
         &::before {
           z-index: 1;
-          bottom: -210px;
+          bottom: -205px;
           right: -135px;
           width: 194px;
           height: 91px;
@@ -122,8 +120,8 @@
         }
 
         &::after {
-          bottom: -192px;
-          right: -114px;
+          bottom: -188px;
+          right: -115px;
           width: 150px;
           height: 30px;
           border-radius: 150px / 30px;
@@ -133,6 +131,7 @@
 
         & img {
           position: relative;
+          left: 12px;
           z-index: 2;
         }
       }
@@ -175,12 +174,11 @@
           content: "";
           position: absolute;
           background-color: #f4eed9;
-          z-index: 2;
         }
 
         &::before {
-					top: -47px;
-					right: -46px;
+          top: -43px;
+          right: -43px;
           width: 15px;
           height: 15px;
           border-radius: 15px;
@@ -203,12 +201,11 @@
           content: "";
           position: absolute;
           background-color: #f4eed9;
-          z-index: 2;
         }
 
         &::before {
-					top: -34px;
-					left: -58px;
+          top: -30px;
+          left: -55px;
 					width: 15px;
 					height: 15px;
           border-radius: 15px;

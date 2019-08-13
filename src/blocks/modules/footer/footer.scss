@@ -1,0 +1,104 @@
+.footer {
+  @include respond-to(desktop) {
+		padding-bottom: 15px;
+    background-color: #fdfcef;
+  }
+	
+  &__wrap {
+		@include respond-to(desktop) {
+			max-width: 950px;
+      margin: auto;
+    }
+	}
+
+	&__top-wrap {
+    display: flex;
+    justify-content: space-around;
+		align-items: flex-start;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #000000;
+	}
+
+	&__nav-list {
+		position: relative;
+		margin-top: 35px;
+		font-family: "VogueHighline", serif;
+		font-weight: 700;
+		font-size: 18px;
+		text-transform: uppercase;
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top: -17px;
+			left: 0;
+			width: 125px;
+			height: 2px;
+			background-color: #000000;
+		}
+	}
+
+	&__nav-item {
+		margin-bottom: 10px;
+	}
+
+	&__nav-item-link {
+		&:hover {
+			color: #666666;
+		}
+	}
+
+	&__messangers {
+		align-self: center;
+	}
+
+	&__messangers-action {
+    display: block;
+		margin-bottom: 13px;
+		font-size: 22px;
+  }
+
+  &__messangers-list {
+    display: flex;
+    justify-content: center;
+    font-size: 0;
+  }
+
+  &__messangers-item {
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__messangers-item-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &--viber {
+      background-image: url(../img/icon/viber.png);
+    }
+
+    &--telegram {
+      background-image: url(../img/icon/telegram.png);
+    }
+
+    &--whatsapp {
+      background-image: url(../img/icon/whatsapp.png);
+    }
+
+    &--messanger {
+      background-image: url(../img/icon/messanger.png);
+    }
+  }
+
+	&__copyrights {
+		width: 100%;
+		text-align: right;
+	}
+}
