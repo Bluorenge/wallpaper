@@ -1,0 +1,49 @@
+.header {
+  @include respond-to(desktop) {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 1040px;
+		height: 150px;
+		margin: auto;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	
+	&__logo-wrap {
+		@include respond-to(desktop) {
+      margin-right: 100px;
+    }
+	}
+
+  &__nav-list {
+    @include respond-to(desktop) {
+			display: flex;
+			flex-shrink: 0;
+    }
+  }
+
+  &__nav-item {
+		@include respond-to(desktop) {
+			margin-right: 20px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+  }
+
+  &__nav-item-link {
+    @include respond-to(desktop) {
+      display: block;
+      padding: 10px 20px;
+			background-color: $yellow-color;
+			font-size: 23px;
+			
+			&:hover {
+				background-color: #d9c88b;
+			}
+    }
+  }
+}

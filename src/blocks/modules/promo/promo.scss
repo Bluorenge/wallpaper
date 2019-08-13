@@ -1,0 +1,247 @@
+.promo {
+  @include respond-to(desktop) {
+    width: 100%;
+    position: relative;
+  }
+
+  &__wrap {
+    @include respond-to(desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1040px;
+      margin: auto;
+      padding-top: 150px;
+    }
+  }
+
+  &__left-img-wrap {
+		@include respond-to(desktop) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 69%;
+			height: 100%;
+			z-index: -1;
+			background-color: #f6efd8;
+		}
+  }
+
+  &__right-img-wrap {
+    @include respond-to(desktop) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 31%;
+      height: 702px;
+      padding: 15px;
+      z-index: -1;
+      background: url(../img/promo-bg.jpg) 100% 100% no-repeat;
+    }
+  }
+
+	&__right-img-border {
+		@include respond-to(desktop) {
+			height: 100%;
+			border: 3px solid #eadaa9;
+		}
+	}
+
+	&__left-content {
+    @include respond-to(desktop) {
+			width: 60%;
+			z-index: 1;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-family: "VogueHighline", serif;
+    color: $brown-title-color;
+
+    @include respond-to(desktop) {
+      width: 400px;
+      margin-bottom: 35px;
+      font-size: 55px;
+    }
+  }
+
+  &__text {
+    font-weight: 100;
+    color: $brown-text-color;
+
+    @include respond-to(desktop) {
+      width: 500px;
+      margin-bottom: 35px;
+      font-size: 26px;
+    }
+	}
+
+  &__right-content {
+    @include respond-to(desktop) {
+      width: 40%;
+      padding: 25px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 40px 6px rgba(0, 0, 1, 0.1);
+    }
+  }
+
+  &__right-content-wrap {
+    @include respond-to(desktop) {
+      padding: 30px 20px;
+      border: 15px solid $yellow-border-color;
+      border-image: linear-gradient(
+        -45deg,
+        transparent 0%,
+        $yellow-border-color 100%
+      );
+      border-image-slice: 1;
+      text-align: center;
+    }
+  }
+
+  &__form-action {
+    font-family: "VogueHighline", serif;
+    color: $brown-title-second-color;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    margin-bottom: 30px;
+
+    & span {
+      display: block;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__form-input {
+    width: 268px;
+    margin-bottom: 20px;
+  }
+
+  &__form-btn {
+		margin-bottom: 40px;
+  }
+
+  &__messangers-action {
+    display: block;
+    margin-bottom: 13px;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  &__messangers-list {
+    display: flex;
+    justify-content: center;
+    font-size: 0;
+  }
+
+  &__messangers-item {
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__messangers-item-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &--viber {
+      background-image: url(../img/icon/viber.png);
+    }
+
+    &--telegram {
+      background-image: url(../img/icon/telegram.png);
+    }
+
+    &--whatsapp {
+      background-image: url(../img/icon/whatsapp.png);
+    }
+
+    &--messanger {
+      background-image: url(../img/icon/messanger.png);
+    }
+  }
+
+  &__buttom-content {
+		@include respond-to(desktop) {
+			position: relative;
+      width: 100%;
+      margin-top: 40px;
+			margin-bottom: 35px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -125px;
+				left: -177px;
+				z-index: 0;
+				width: 242px;
+				height: 188px;
+				background-image: url(../img/circles.png);
+			}
+    }
+  }
+
+  &__adress-list {
+    @include respond-to(desktop) {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &__adress-item {
+    position: relative;
+    padding-left: 27px;
+    font-weight: 300;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 17px;
+      height: 24px;
+      background-image: url(../img/icon/pin.png);
+    }
+
+    @include respond-to(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 35px;
+
+      &:nth-child(1) {
+        width: 200px;
+      }
+
+      &:nth-child(2) {
+        width: 235px;
+      }
+
+      &:last-child {
+        width: 245px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__adress-name {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: $brown-title-color;
+  }
+
+  &__adress-tel {
+    font-size: 12px;
+    color: $brown-text-color;
+  }
+}

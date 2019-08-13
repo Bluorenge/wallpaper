@@ -1,0 +1,62 @@
+.designers {
+  @include respond-to(desktop) {
+    padding-bottom: 100px;
+		background-color: #fdfcef;
+		overflow: hidden;
+  }
+
+  &__wrap {
+    @include respond-to(desktop) {
+      max-width: 1040px;
+      padding-left: 100px;
+      padding-bottom: 215px;
+      margin: auto;
+    }
+	}
+
+  &__img-wrap {
+		position: relative;
+
+    @include respond-to(desktop) {
+    }
+	}
+
+	&__blockquote {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 15px;
+		width: 280px;
+		height: 87px;
+		background-color: #ffffff;
+		font-family: "VogueHighline", serif;
+		font-size: 14px;
+		text-align: right;
+
+		@include respond-to(desktop) {
+    }
+	}
+
+  &__desc {
+    @include respond-to(desktop) {
+			width: 380px;
+
+    }
+	}
+
+	&__wrap {
+		@include respond-to(desktop) {
+			
+    }
+	}
+
+  &__title-wrap {
+    @include respond-to(desktop) {
+    }
+	}
+
+  &__title-wrap {
+    @include respond-to(desktop) {
+    }
+	}
+}

@@ -1,0 +1,86 @@
+.showroom {
+  @include respond-to(desktop) {
+		padding-top: 200px;
+		padding-bottom: 120px;
+    background-color: #fdfcef;
+  }
+
+  &__title-wrap {
+    @include respond-to(desktop) {
+      max-width: 1040px;
+      margin: auto;
+    }
+  }
+
+  &__title-num {
+    @include respond-to(desktop) {
+      margin-right: 25px;
+    }
+  }
+
+  &__content-wrap {
+    @include respond-to(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1310px;
+      margin: auto;
+      overflow: hidden;
+    }
+  }
+
+  &__content-row {
+    @include respond-to(desktop) {
+      flex-shrink: 0;
+      display: flex;
+
+      &:nth-child(1) {
+				align-items: flex-end;
+			}
+			
+			&:nth-child(3) {
+				margin-top: -90px;
+			}
+    }
+  }
+
+  &__steps {
+    background-color: #bfaf7a;
+    color: #ffffff;
+
+    @include respond-to(desktop) {
+			position: relative;
+			top: -40px;
+      width: 610px;
+      padding: 20px;
+      box-shadow: 0px 0px 24.84px 2.16px rgba(0, 0, 1, 0.13);
+    }
+  }
+
+  &__steps-wrap {
+    @include respond-to(desktop) {
+      padding-top: 50px;
+      padding-left: 35px;
+      padding-right: 35px;
+      padding-bottom: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__steps-title {
+    display: block;
+    margin-bottom: 30px;
+    font-family: "VogueHighline", serif;
+
+    @include respond-to(desktop) {
+      font-size: 35px;
+    }
+  }
+
+  &__steps-item {
+    @include respond-to(desktop) {
+      margin-bottom: 25px;
+      font-weight: 100;
+      font-size: 18px;
+    }
+  }
+}
