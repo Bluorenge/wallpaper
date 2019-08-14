@@ -25,14 +25,14 @@ gulp.task("images", () => {
             }),
             imageminPngquant({
                 speed: 5,
-                quality: [0.6, 0.8]
+                quality: [0.8, 1]
             }),
             imageminZopfli({
                 more: true
             }),
             imageminMozjpeg({
                 progressive: true,
-                quality: 90
+                quality: 100
             }),
             imagemin.svgo({
                 plugins: [

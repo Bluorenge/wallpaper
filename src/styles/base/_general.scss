@@ -86,6 +86,10 @@ a {
   box-shadow: 7px 5px 8px 1px rgba(0, 0, 1, 0.08);
   outline: none;
 
+  &:hover {
+    border: 1px solid #757575;
+  }
+
   &:focus {
     border: 1px solid #757575;
   }

@@ -29,15 +29,75 @@
     }
   }
 
-  &__content {
+  &__slide {
     @include respond-to(desktop) {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: flex-start;
       width: 780px;
       margin: auto;
       margin-bottom: 85px;
+
+      &--active {
+        display: flex;
+      }
+
+      &--hidden {
+        display: none;
+      }
     }
+  }
+
+  &__slider-arrow {
+    position: absolute;
+    top: 455px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #c0ba9e;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--prev::before,
+    &--prev::after,
+    &--next::before,
+    &--next::after {
+      position: absolute;
+      content: "";
+      top: 18px;
+      right: 0;
+      height: 2px;
+      width: 12px;
+      background-color: #c0ba9e;
+    }
+
+    &--prev::before,
+    &--next::before {
+      right: 10px;
+      transform: rotate(45deg);
+    }
+
+    &--prev::after,
+    &--next::after {
+      top: 10px;
+      right: 10px;
+      transform: rotate(-45deg);
+    }
+
+    &--next::after {
+      top: 18px;
+      right: 9px;
+    }
+
+    &--next::before {
+      top: 10px;
+      right: 9px;
+    }
+  }
+
+  &__slider-arrow--next {
+    right: 0;
   }
 
   &__gallery {
@@ -54,29 +114,6 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
-  }
-
-  &__gallery-col {
-    @include respond-to(desktop) {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      margin-right: 5px;
-
-      &:last-child {
-        margin: 0;
-      }
-    }
-  }
-
-  &__img {
-    @include respond-to(desktop) {
-      margin-bottom: 5px;
-
-      &:last-child {
-        margin: 0;
-      }
     }
   }
 
@@ -109,6 +146,7 @@
   &__name-wallpaper {
     @include respond-to(desktop) {
       display: block;
+      width: 330px;
       margin-bottom: 10px;
       font-family: "VogueHighline", serif;
       font-size: 25px;

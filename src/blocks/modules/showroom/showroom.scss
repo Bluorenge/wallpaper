@@ -1,14 +1,40 @@
 .showroom {
   @include respond-to(desktop) {
-		padding-top: 200px;
-		padding-bottom: 120px;
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 120px;
     background-color: #fdfcef;
+    z-index: -1;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -130px;
+      left: 0;
+      height: 130px;
+      width: 100%;
+      z-index: -1;
+      background-color: #fdfcef;
+    }
   }
 
   &__title-wrap {
     @include respond-to(desktop) {
+      position: relative;
       max-width: 1040px;
       margin: auto;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -125px;
+        right: -177px;
+        z-index: 0;
+        width: 242px;
+        height: 188px;
+        background-image: url(../img/circles.png);
+      }
     }
   }
 
@@ -34,12 +60,12 @@
       display: flex;
 
       &:nth-child(1) {
-				align-items: flex-end;
-			}
-			
-			&:nth-child(3) {
-				margin-top: -90px;
-			}
+        align-items: flex-end;
+      }
+
+      &:nth-child(3) {
+        margin-top: -90px;
+      }
     }
   }
 
@@ -48,8 +74,8 @@
     color: #ffffff;
 
     @include respond-to(desktop) {
-			position: relative;
-			top: -40px;
+      position: relative;
+      top: -40px;
       width: 610px;
       padding: 20px;
       box-shadow: 0px 0px 24.84px 2.16px rgba(0, 0, 1, 0.13);

@@ -156,6 +156,14 @@
 	}
 
 	&__input-wrap {
+
+		&::after {
+			left: 55px;
+		}
+		&::before {
+			left: 30px;
+		}
+		
 		@include respond-to(desktop) {
 			margin-bottom: 20px;
 

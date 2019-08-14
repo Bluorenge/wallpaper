@@ -2,10 +2,10 @@
   @include respond-to(desktop) {
     background-color: #fdfcef;
     overflow: hidden;
-	}	
+  }
 
-	&__title-wrap,
-	&__content-wrap {
+  &__title-wrap,
+  &__content-wrap {
     @include respond-to(desktop) {
       position: relative;
       max-width: 1080px;
@@ -16,20 +16,37 @@
   &__content-wrap {
     @include respond-to(desktop) {
       display: flex;
-			flex-wrap: wrap;
-			align-items: flex-end;
-			justify-content: space-around;
-			max-width: 1030px;
-			padding-top: 150px;
-			padding-bottom: 215px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-around;
+      max-width: 1030px;
+      padding-top: 150px;
+      padding-bottom: 215px;
     }
-	}
-	
-	&__content {
+  }
+
+  &__content {
     @include respond-to(desktop) {
-			background: url(../img/designers/designers-bg.jpg) 100% 100% no-repeat;
-			background-size: cover;
-			background-position: center;
+      position: relative;
+      background: url(../img/designers/designers-bg.jpg) 100% 100% no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+            -180deg,
+            #fdfcef 0%,
+            rgba(253, 252, 239, 0) 20%
+          ),
+          linear-gradient(180deg, rgba(253, 252, 239, 0) 60%, #fdfcef 100%);
+      }
     }
   }
 
@@ -37,7 +54,9 @@
     position: relative;
 
     @include respond-to(desktop) {
-			margin-bottom: -4px;
+      margin-bottom: -4px;
+      z-index: 3;
+
       &:first-child {
         margin-right: 280px;
       }
@@ -47,13 +66,13 @@
   &__blockquote {
     @include respond-to(desktop) {
       position: absolute;
-			top: -40px;
+      top: -40px;
       left: -63px;
       padding: 15px;
       width: 275px;
       height: 87px;
-			background-color: #ffffff;
-			font-style: italic;
+      background-color: #ffffff;
+      font-style: italic;
       font-size: 14px;
       text-align: right;
     }
@@ -61,8 +80,8 @@
 
   &__img-wrap:nth-last-of-type(2) &__blockquote {
     @include respond-to(desktop) {
-			left: 65px;
-			text-align: start;
+      left: 65px;
+      text-align: start;
     }
   }
 
@@ -70,11 +89,23 @@
     @include respond-to(desktop) {
       position: absolute;
       bottom: 275px;
-      z-index: 1;
+      z-index: 4;
       width: 380px;
       padding: 15px;
-			background-color: #ffffff;
-			box-shadow: 16px 10px 25px 2px rgba(0, 0, 1, 0.14);
+      background-color: #ffffff;
+      box-shadow: 16px 10px 25px 2px rgba(0, 0, 1, 0.14);
+    }
+  }
+
+  &__circle {
+    @include respond-to(desktop) {
+      position: absolute;
+      right: calc(50% - 860px / 2);
+      top: calc(50% - 900px / 2);
+      width: 845px;
+      height: 820px;
+      background: url(../img/designers/circle.svg) 100% 100% no-repeat;
+      background-size: contain;
     }
   }
 
@@ -122,55 +153,56 @@
 
   &__row {
     @include respond-to(desktop) {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			height: 72px;
-			background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 72px;
+      background-color: #ffffff;
+      z-index: 3;
     }
-	}
-	
+  }
+
   &__row-left {
     @include respond-to(desktop) {
-			display: flex;
-			align-items: center;
-			padding-right: 25px;
-			border-right: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      padding-right: 25px;
+      border-right: 1px solid #000000;
     }
-	}
-	
+  }
+
   &__row-right {
-		@include respond-to(desktop) {
-			display: flex;
-			align-items: center;
-			padding-left: 25px;
+    @include respond-to(desktop) {
+      display: flex;
+      align-items: center;
+      padding-left: 25px;
     }
-	}
-	
+  }
+
   &__designer-desc {
     @include respond-to(desktop) {
-			width: 145px;
-			font-size: 12px;
-			font-weight: 100;
-			text-align: right;
-			margin-right: 15px;
+      width: 145px;
+      font-size: 12px;
+      font-weight: 100;
+      text-align: right;
+      margin-right: 15px;
     }
-	}
+  }
 
-	&__row-right &__designer-desc {
-		@include respond-to(desktop) {
-			text-align: left;
-			margin-right: 0;
-			margin-left: 15px;
+  &__row-right &__designer-desc {
+    @include respond-to(desktop) {
+      text-align: left;
+      margin-right: 0;
+      margin-left: 15px;
     }
-	}
-	
+  }
+
   &__designer-name {
     @include respond-to(desktop) {
-			font-family: "VogueHighline", serif;
-			font-size: 22px;
-			text-transform: uppercase;
+      font-family: "VogueHighline", serif;
+      font-size: 22px;
+      text-transform: uppercase;
     }
   }
 }

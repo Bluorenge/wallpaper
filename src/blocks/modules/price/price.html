@@ -8,41 +8,69 @@
       </div>
     </div>
     <div class="price__poll poll">
-      <form class="price__poll-item poll__wrap">
-        <div class="poll__range">
-          <div class="poll__bar poll__bar--done"></div>
-        </div>
+      <div class="poll__range">
+        <div class="poll__bar poll__bar--done"></div>
+      </div>
+      <div class="poll__question-block poll__question-block-1 poll__question-block--active">
         <span class="poll__title">1. Выберите тип комнаты:</span>
         <div class="poll__rooms-list">
           <div class="poll__rooms-row">
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--kitchen"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--kitchen"
+              ></div>
               <label class="poll__label" for="kitchen">
-                <input class="poll__input" type="radio" name="room" id="kitchen" checked />
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="room"
+                  id="kitchen"
+                />
                 <span class="poll__label-checkbox"></span>
                 Кухня
               </label>
             </div>
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--canteen"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--canteen"
+              ></div>
               <label class="poll__label" for="canteen">
-                <input class="poll__input" type="radio" name="room" id="canteen" />
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="room"
+                  id="canteen"
+                />
                 <span class="poll__label-checkbox"></span>
                 Столовая
               </label>
             </div>
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--corridor"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--corridor"
+              ></div>
               <label class="poll__label" for="corridor">
-                <input class="poll__input" type="radio" name="room" id="corridor" />
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="room"
+                  id="corridor"
+                />
                 <span class="poll__label-checkbox"></span>
                 Коридор
               </label>
             </div>
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--livingroom"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--livingroom"
+              ></div>
               <label class="poll__label" for="livingroom">
-                <input class="poll__input" type="radio" name="room" id="livingroom" />
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="room"
+                  id="livingroom"
+                />
                 <span class="poll__label-checkbox"></span>
                 Гостиная
               </label>
@@ -50,24 +78,41 @@
           </div>
           <div class="poll__rooms-row">
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--bedroom"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--bedroom"
+              ></div>
               <label class="poll__label" for="bedroom"
-                ><input class="poll__input" type="radio" name="room" id="bedroom" />
+                ><input
+                  class="poll__input"
+                  type="radio"
+                  name="room"
+                  id="bedroom"
+                />
                 <span class="poll__label-checkbox"></span> Спальня</label
               >
             </div>
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--office"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--office"
+              ></div>
               <label class="poll__label" for="office"
-                ><input class="poll__input" type="radio" name="room" id="office" />
+                ><input
+                  class="poll__input"
+                  type="radio"
+                  name="room"
+                  id="office"
+                />
                 <span class="poll__label-checkbox"></span> Офисное
                 помещение</label
               >
             </div>
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--children"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--children"
+              ></div>
               <label class="poll__label" for="children"
-                ><input class="poll__input"
+                ><input
+                  class="poll__input"
                   type="radio"
                   name="room"
                   id="children"
@@ -76,16 +121,223 @@
               >
             </div>
             <div class="poll__rooms-item">
-              <div class="poll__rooms-item-img poll__rooms-item-img--other"></div>
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--other"
+              ></div>
               <label class="poll__label" for="other"
-                ><input class="poll__input" type="radio" name="room" id="other" />
+                ><input
+                  class="poll__input"
+                  type="radio"
+                  name="room"
+                  id="other"
+                />
                 <span class="poll__label-checkbox"></span>Другое</label
               >
             </div>
           </div>
         </div>
-        <button class="poll__btn btn btn--yellow">Следующий шаг</button>
-      </form>
+      </div>
+      <div class="poll__question-block poll__question-block-2 poll__question-block--hidden">
+        <span class="poll__title">2. Выберите ВИД обоев:</span>
+        <div class="poll__rooms-list">
+          <div class="poll__rooms-row">
+            <div class="poll__rooms-item">
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--kitchen"
+              ></div>
+              <label class="poll__label" for="plain">
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="type-of-wp"
+                  id="plain"
+                  checked
+                />
+                <span class="poll__label-checkbox"></span>
+                Однотонные
+              </label>
+            </div>
+            <div class="poll__rooms-item">
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--canteen"
+              ></div>
+              <label class="poll__label" for="with-pic">
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="type-of-wp"
+                  id="with-pic"
+                />
+                <span class="poll__label-checkbox"></span>
+                С рисунком
+              </label>
+            </div>
+            <div class="poll__rooms-item">
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--corridor"
+              ></div>
+              <label class="poll__label" for="photo-wp">
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="type-of-wp"
+                  id="photo-wp"
+                />
+                <span class="poll__label-checkbox"></span>
+                Фотообои
+              </label>
+            </div>
+            <div class="poll__rooms-item">
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--livingroom"
+              ></div>
+              <label class="poll__label" for="painting-wp">
+                <input
+                  class="poll__input"
+                  type="radio"
+                  name="type-of-wp"
+                  id="painting-wp"
+                />
+                <span class="poll__label-checkbox"></span>
+                Под покраску
+              </label>
+            </div>
+          </div>
+          <div class="poll__rooms-row">
+            <div class="poll__rooms-item">
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--bedroom"
+              ></div>
+              <label class="poll__label" for="liquid"
+                ><input
+                  class="poll__input"
+                  type="radio"
+                  name="type-of-wp"
+                  id="liquid"
+                />
+                <span class="poll__label-checkbox"></span>Жидкие</label
+              >
+            </div>
+            <div class="poll__rooms-item">
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--office"
+              ></div>
+              <label class="poll__label" for="design"
+                ><input
+                  class="poll__input"
+                  type="radio"
+                  name="type-of-wp"
+                  id="design"
+                />
+                <span class="poll__label-checkbox"></span>Дизайнерские
+                /VIP</label
+              >
+            </div>
+            <div class="poll__rooms-item">
+              <div
+                class="poll__rooms-item-img poll__rooms-item-img--other"
+              ></div>
+              <label class="poll__label" for="other-wp"
+                ><input
+                  class="poll__input"
+                  type="radio"
+                  name="type-of-wp"
+                  id="other-wp"
+                />
+                <span class="poll__label-checkbox"></span>Другие</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="poll__question-block poll__question-block-3 poll__question-block--hidden">
+        <span class="poll__title">3. Когда нужны:</span>
+        <div class="poll__rooms-list poll__rooms-list--time">
+          <div class="poll__rooms-item">
+            <label class="poll__label" for="week"
+              ><input
+                class="poll__input"
+                type="radio"
+                name="delivery-time"
+                id="week"
+              />
+              <span class="poll__label-checkbox"></span>В течение недели</label
+            >
+          </div>
+          <div class="poll__rooms-item">
+            <label class="poll__label" for="month"
+              ><input
+                class="poll__input"
+                type="radio"
+                name="delivery-time"
+                id="month"
+                checked
+              />
+              <span class="poll__label-checkbox"></span>В течение месяца</label
+            >
+          </div>
+          <div class="poll__rooms-item">
+            <label class="poll__label" for="three-days"
+              ><input
+                class="poll__input"
+                type="radio"
+                name="delivery-time"
+                id="three-days"
+              />
+              <span class="poll__label-checkbox"></span>В течение 3-ёх
+              дней</label
+            >
+          </div>
+          <div class="poll__rooms-item">
+            <label class="poll__label" for="urgently"
+              ><input
+                class="poll__input"
+                type="radio"
+                name="delivery-time"
+                id="urgently"
+              />
+              <span class="poll__label-checkbox"></span>Срочно</label
+            >
+          </div>
+          <div class="poll__rooms-item">
+            <label class="poll__label" for="two-month"
+              ><input
+                class="poll__input"
+                type="radio"
+                name="delivery-time"
+                id="two-month"
+              />
+              <span class="poll__label-checkbox"></span>Есть 2 месяца в
+              запасе</label
+            >
+          </div>
+        </div>
+      </div>
+      <button class="poll__btn btn btn--yellow">Следующий шаг</button>
+      <div class="poll__question-block poll__question-block--hidden">
+        <span class="poll__title poll__title--fourth"
+          >4. Заполните форму и УЗНАЙТЕ СТОИМОСТЬ Ваших обоев:</span
+        >
+        <form method="get" class="poll__form">
+          <div class="poll__form-wrap">
+            <input
+              type="text"
+              placeholder="Ваше имя"
+              id="Name"
+              class="poll__form-input input"
+            />
+            <input
+              type="tel"
+              placeholder="Ваш телефон"
+              id="Telephone"
+              class="poll__form-input input"
+            />
+            <button class="poll__form-btn btn btn--yellow">
+              Узнать сейчас
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
