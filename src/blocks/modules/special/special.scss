@@ -29,6 +29,10 @@
     }
   }
 
+  &__slider {
+    position: relative;
+  }
+
   &__slide {
     @include respond-to(desktop) {
       display: flex;
