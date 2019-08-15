@@ -1,7 +1,7 @@
 .promo {
   background: url(../img/promo-bg-mobile.jpg) 100% 100% no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: top;
 
   @include respond-to(desktop) {
     width: 100%;
