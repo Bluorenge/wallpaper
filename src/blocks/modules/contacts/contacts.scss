@@ -5,13 +5,16 @@
   }
 
   &__wrap {
+    padding-top: 20px;
+    max-width: 280px;
+    margin: auto;
+
     @include respond-to(desktop) {
       position: relative;
       max-width: 1040px;
       padding-top: 90px;
       padding-left: 100px;
       padding-bottom: 100px;
-      margin: auto;
       margin-bottom: 100px;
       background-color: #ffffff;
 
@@ -30,23 +33,40 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     @include respond-to(desktop) {
-      display: flex;
-      flex-direction: column;
     }
   }
 
   &__row {
+    margin-top: 20px;
+    
+    &--desktop {
+      display: none;
+    }
+    
     @include respond-to(desktop) {
       display: flex;
       justify-content: space-between;
       width: 100%;
+      margin-top: 0;
       margin-bottom: 20px;
+
+      &--desktop {
+        display: flex;
+      }
     }
   }
 
   &__item {
     position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+
+    &--mobile {
+      margin-bottom: 60px;
+    }
 
     &--marker::before {
       content: "";
@@ -71,37 +91,42 @@
     @include respond-to(desktop) {
       width: 33%;
       margin-right: 50px;
-      padding-left: 30px;
 
-      &:last-child {
-        margin-right: 0;
+      &--mobile {
+        display: none;
+      }
+
+      &:nth-last-of-type(2) {
+        flex-shrink: 0;
+        margin-right: 4px;
       }
     }
   }
 
   &__map {
     position: relative;
-		height: 200px;
+    height: 200px;
     background: url(../img/map.jpg) 100% 100% no-repeat;
     background-size: cover;
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-          -180deg,
-          #fdfcef 0%,
-          rgba(253, 252, 239, 0) 50%
-        ),
-        linear-gradient(180deg, rgba(253, 252, 239, 0) 80%, #fdfcef 100%);
-    }
     @include respond-to(desktop) {
-			height: 758px;
+      height: 758px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+            -180deg,
+            #fdfcef 0%,
+            rgba(253, 252, 239, 0) 50%
+          ),
+          linear-gradient(180deg, rgba(253, 252, 239, 0) 80%, #fdfcef 100%);
+      }
     }
   }
 }

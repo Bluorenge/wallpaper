@@ -95,8 +95,7 @@ a {
 
 .input {
   width: 220px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: 46px;
   padding-left: 50px;
   padding-right: 15px;
   border: 1px solid #b8b8b8;
@@ -124,16 +123,16 @@ a {
     }
 
     &::before {
-      top: 12px;
-      left: 20px;
+      top: 16px;
+      left: 22px;
       width: 15px;
       height: 15px;
       background-image: url(../img/icon/phone.png);
     }
 
     &::after {
-      top: 8px;
-      left: 42px;
+      top: 12px;
+      left: 45px;
       width: 1px;
       height: 25px;
       background-color: #b8b8b8;

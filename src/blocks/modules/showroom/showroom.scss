@@ -21,6 +21,15 @@
     }
   }
 
+  &__wrap {
+    max-width: 320px;
+    margin: auto;
+
+    @include respond-to(desktop) {
+      max-width: 100%;
+    }
+  }
+
   &__title-wrap {
     position: relative;
     max-width: 300px;
@@ -59,6 +68,8 @@
   }
 
   &__content-row {
+    overflow: hidden;
+    
     @include respond-to(desktop) {
       flex-shrink: 0;
       display: flex;
@@ -74,11 +85,16 @@
   }
 
   &__img-wrap {
+    transform: translateX(-50%);
     margin-bottom: -5px;
 
     &--fix {
       position: relative;
       top: 2px;
+    }
+    
+    @include respond-to(desktop) {
+      transform: none;
     }
   }
 
@@ -92,6 +108,7 @@
     @include respond-to(desktop) {
       position: relative;
       top: -40px;
+      right: 40px;
       padding: 20px;
     }
   }

@@ -440,8 +440,7 @@
                   name="room"
                   id="office"
                 />
-                <span class="poll__label-checkbox"></span> Офисное
-                помещение</label
+                <span class="poll__label-checkbox"></span>Офис</label
               >
             </div>
             <div class="poll__rooms-item">
@@ -477,7 +476,7 @@
       </div>
       <div class="poll__question-block poll__question-block-2 poll__question-block--hidden">
         <span class="poll__title">2. Выберите ВИД обоев:</span>
-        <div class="poll__rooms-list">
+        <div class="poll__rooms-list poll__rooms-list--type">
           <div class="poll__rooms-row">
             <div class="poll__rooms-item">
               <div
@@ -558,9 +557,9 @@
             </div>
             <div class="poll__rooms-item">
               <div
-                class="poll__rooms-item-img poll__rooms-item-img--office"
+                class="poll__rooms-item-img poll__rooms-item-img--vip"
               ></div>
-              <label class="poll__label" for="design"
+              <label class="poll__label poll__label--vip" for="design"
                 ><input
                   class="poll__input"
                   type="radio"
@@ -692,11 +691,13 @@
     <div class="type__gallery">
       <div class="type__gallery-item type__gallery-item--main">
         <div class="type__gallery-img-scroll"></div>
-        <img
-          class="type__gallery-img"
-          src="img/slider/slide-img-1.jpg"
-          alt="рисунок обоев"
-        />
+        <div class="type__gallery-img-wrap">          
+          <img
+            class="type__gallery-img img-responsive"
+            src="img/slider/slide-img-1.jpg"
+            alt="рисунок обоев"
+          />
+        </div>
       </div>
       <div class="type__gallery-item">
         <div class="type__gallery-img-scroll"></div>
@@ -706,19 +707,23 @@
       </div>
       <div class="type__gallery-item">
         <div class="type__gallery-img-scroll"></div>
-        <img
-          class="type__gallery-img"
-          src="img/slider/slide-img-1.jpg"
-          alt="рисунок обоев"
-        />
+        <div class="type__gallery-img-wrap">          
+          <img
+            class="type__gallery-img img-responsive"
+            src="img/slider/slide-img-1.jpg"
+            alt="рисунок обоев"
+          />
+        </div>
       </div>
       <div class="type__gallery-item">
         <div class="type__gallery-img-scroll"></div>
-        <img
-          class="type__gallery-img"
-          src="img/slider/slide-img-1.jpg"
-          alt="рисунок обоев"
-        />
+        <div class="type__gallery-img-wrap">          
+          <img
+            class="type__gallery-img img-responsive"
+            src="img/slider/slide-img-1.jpg"
+            alt="рисунок обоев"
+          />
+        </div>
       </div>
     </div>
     <div class="type__gallery-desc-wrap">
@@ -773,7 +778,7 @@
               placeholder="Ваше имя"
             />
           </div>
-          <div class="catalog__input-wrap input__wrap--phone">
+          <div class="catalog__input-wrap catalog__input-wrap--phone input__wrap--phone">
             <input
               type="tel"
               class="catalog__form-input input"
@@ -829,7 +834,7 @@
         </div>
       </div>
       <div class="designers__circle"></div>
-      <div class="designers__img-wrap">
+      <div class="designers__img-wrap designers__img-wrap--designer-2">
         <picture>
           <source
             type="image/webp"
@@ -843,7 +848,7 @@
           <source type="image/webp" srcset="img/designers/designer-2.webp" />
           <img src="img/designers/designer-2.jpg" alt="фото шоурума" />
         </picture>
-        <blockquote class="designers__blockquote">
+        <blockquote class="designers__blockquote designers__blockquote--designer-2">
           «Я уверена, что каждый объект требует индивидуального подхода. Главный
           принцип моей работы – создание пространства для жизни!»
         </blockquote>
@@ -884,46 +889,6 @@
               <source
                 type="image/webp"
                 media="(min-width: 768px)"
-                srcset="img/special/special-slide-1.webp"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="img/special/special-slide-1.jpg"
-              />
-              <source
-                type="image/webp"
-                srcset="img/special/special-slide-1.webp"
-              />
-              <img
-                src="img/special/special-slide-1.jpg"
-                alt="фото эксклюзивных обоев"
-                class="img-responsive"
-              />
-            </picture>
-          </div>
-        </div>
-        <div class="special__desc">
-          <div class="special__num">1</div>
-          <h3 class="special__name-wallpaper">Обои «Сальвадор»</h3>
-          <span class="special__manufacturer">Производитель: Италия</span>
-          <p class="special__desc-text">
-            Сonsequences that are extremely pabninuful. Nor again is there anyone
-            who lovsor pursues or again is there anyone whohh loves or pursues or
-            desires to obtain paihnof itself, becase it is pain, but because
-            occasionally circumstances occur.
-          </p>
-          <span class="special__warranty">20 лет гарантии и носки</span>
-          <span class="special__price">Цена за 1м3 - 1000 грн</span>
-          <span class="special__footnote">*минимальный заказ - 10м3</span>
-        </div>
-      </div>
-      <div class="special__slide special__slide--hidden">
-        <div class="special__gallery">
-          <div class="special__gallery-img-wrap">
-            <picture>
-              <source
-                type="image/webp"
-                media="(min-width: 768px)"
                 srcset="img/special/special-slide-2.webp"
               />
               <source
@@ -943,24 +908,24 @@
           </div>
         </div>
         <div class="special__desc">
-          <div class="special__num">2</div>
+          <div class="special__num">1</div>
           <h3 class="special__name-wallpaper">
             Коллекция KABUKI от Graham & Brown
           </h3>
           <span class="special__manufacturer">Производитель: Англия</span>
           <p class="special__desc-text">
-            Эта коллекция обоев украшена мужскими и женскими мотивами, наложенными
-            на драматический театр цветов Кабуки, название которой относится к
-            сложной форме японской танцевальной драмы. Исследуя Инь и Ян, эти
-            восточные обои Кабуки отражают многогранность тенденций этого года.
-            Элегантные и современные обои с изысканной современной геометрией,
-            смешанные с различными тенденциями и представляют колебание между
-            безмятежным и театральным, а в доме создает гармоничный баланс ярких
-            элементов. Этот простой, но вдохновляющий дизайн создает стильный и
-            чисто эстетический вид современного интерьера, смело выражая
-            индивидуальность. Удивительные обои в стиле ар-деко имеют
-            геометрический рисунок, который привлекает внимание и добавляет
-            винтажную изысканность во все комнаты Вашего дома.
+            Эта коллекция обоев украшена мужскими и женскими мотивами,
+            наложенными на драматический театр цветов Кабуки, название которой
+            относится к сложной форме японской танцевальной драмы. Исследуя Инь
+            и Ян, эти восточные обои Кабуки отражают многогранность тенденций
+            этого года. Элегантные и современные обои с изысканной современной
+            геометрией, смешанные с различными тенденциями и представляют
+            колебание между безмятежным и театральным, а в доме создает
+            гармоничный баланс ярких элементов. Этот простой, но вдохновляющий
+            дизайн создает стильный и чисто эстетический вид современного
+            интерьера, смело выражая индивидуальность. Удивительные обои в стиле
+            ар-деко имеют геометрический рисунок, который привлекает внимание и
+            добавляет винтажную изысканность во все комнаты Вашего дома.
           </p>
           <span class="special__warranty">20 лет гарантии и носки</span>
           <span class="special__price">Цена за 1м3 - 1000 грн</span>
@@ -993,7 +958,7 @@
           </div>
         </div>
         <div class="special__desc">
-          <div class="special__num">3</div>
+          <div class="special__num">2</div>
           <h3 class="special__name-wallpaper">
             Обои «Highland» от производителя Graham Brown
           </h3>
@@ -1001,13 +966,13 @@
           <p class="special__desc-text">
             В данной линейке представлены обои в разных дизайнах с различными
             элементами декора, которые сочетаются с классической, но современной
-            палитрой, создавая утонченный облик хайленд-декора. Теплые насыщенные
-            тона подчеркнуты металлическими переливами, вплетенными в рисунки,
-            сделанные вручную. Текстура дерева с растительными элементами и
-            нарисованными вручную горными оленями, вневременной ситец и тартан
-            (орнамент шотландского клетчатого узора), с домашним дизайном ткани
-            (эффектом текстиля), являются ключом к созданию уютной атмосферы
-            Вашего дома.
+            палитрой, создавая утонченный облик хайленд-декора. Теплые
+            насыщенные тона подчеркнуты металлическими переливами, вплетенными в
+            рисунки, сделанные вручную. Текстура дерева с растительными
+            элементами и нарисованными вручную горными оленями, вневременной
+            ситец и тартан (орнамент шотландского клетчатого узора), с домашним
+            дизайном ткани (эффектом текстиля), являются ключом к созданию
+            уютной атмосферы Вашего дома.
           </p>
           <span class="special__warranty">20 лет гарантии и носки</span>
           <span class="special__price">Цена за 1м3 - 1000 грн</span>
@@ -1040,7 +1005,7 @@
           </div>
         </div>
         <div class="special__desc">
-          <div class="special__num">4</div>
+          <div class="special__num">3</div>
           <h3 class="special__name-wallpaper">
             Коллекция "Palais Royal" от производителя Erismann
           </h3>
@@ -1048,16 +1013,16 @@
           <p class="special__desc-text">
             Перенеситесь в чарующий Пале-Рояль. Обитель дизайна и мир
             превосходного вкуса. Окунитесь в современную интерпретацию
-            классических, элегантных и экстравагантных обоев в роскошной цветовой
-            гамме. Тщательно отобранные мотивы создают эстетику и наполняют
-            комнату атмосферой царственной грациозности. Художественные орнаменты
-            с рельефной структурой источают роскошь и королевский шарм. Легкие
-            мерцающие элементы, напоминающие чистый шелк, придают коллекции
-            изысканную сдержанность. Нежный и гармоничный переход оттенков умело
-            подчеркивает текстильную фактуру обоев. Игра цветов не менее
-            соблазнительна, чем дизайн. Богатые оттенки золотого и царственного
-            синего переплетаются с таинственными нотками опалового, кашемира и
-            марсала.
+            классических, элегантных и экстравагантных обоев в роскошной
+            цветовой гамме. Тщательно отобранные мотивы создают эстетику и
+            наполняют комнату атмосферой царственной грациозности.
+            Художественные орнаменты с рельефной структурой источают роскошь и
+            королевский шарм. Легкие мерцающие элементы, напоминающие чистый
+            шелк, придают коллекции изысканную сдержанность. Нежный и
+            гармоничный переход оттенков умело подчеркивает текстильную фактуру
+            обоев. Игра цветов не менее соблазнительна, чем дизайн. Богатые
+            оттенки золотого и царственного синего переплетаются с таинственными
+            нотками опалового, кашемира и марсала.
           </p>
           <span class="special__warranty">20 лет гарантии и носки</span>
           <span class="special__price">Цена за 1м3 - 1000 грн</span>
@@ -1090,7 +1055,7 @@
           </div>
         </div>
         <div class="special__desc">
-          <div class="special__num">5</div>
+          <div class="special__num">4</div>
           <h3 class="special__name-wallpaper">
             Коллекция «Most Fabulous» от производителя Rasch
           </h3>
@@ -1099,17 +1064,17 @@
             Кому по душе датское «hygge» и шведское «lagom», обозначающие
             скандинавский уют и умеренность, тому понравится и новая современная
             коллекция амстердамской студии Onszelf. Дизайнеры студии воплотили
-            скандинавский образ жизни и хорошее настроение в графическом дизайне.
-            Будь то шэбби шик или индустриальный дизайн, mid-century или
-            индивидуальный микс – новая коллекция подчеркивает Ваш неповторимый
-            вкус и стиль. Если Вы предпочитаете сдержанность в интерьере, возьмите
-            однотонные обои неярких расцветок и разбавьте их акцентами модных
-            сегодня оттенков терракоты, петроля или розового. Орнамент при этом
-            варьируется от случайных «чернильных пятен» до стилизованных бутонов и
-            элегантных линий. Благородные оттенки золота и серебра дополняют
-            минималистские черно-белые дизайны. Орнамент и однотонные обои
-            идеально сочетаются друг с другом, что позволяет создать неповторимый,
-            индивидуальный интерьер.
+            скандинавский образ жизни и хорошее настроение в графическом
+            дизайне. Будь то шэбби шик или индустриальный дизайн, mid-century
+            или индивидуальный микс – новая коллекция подчеркивает Ваш
+            неповторимый вкус и стиль. Если Вы предпочитаете сдержанность в
+            интерьере, возьмите однотонные обои неярких расцветок и разбавьте их
+            акцентами модных сегодня оттенков терракоты, петроля или розового.
+            Орнамент при этом варьируется от случайных «чернильных пятен» до
+            стилизованных бутонов и элегантных линий. Благородные оттенки золота
+            и серебра дополняют минималистские черно-белые дизайны. Орнамент и
+            однотонные обои идеально сочетаются друг с другом, что позволяет
+            создать неповторимый, индивидуальный интерьер.
           </p>
           <span class="special__warranty">20 лет гарантии и носки</span>
           <span class="special__price">Цена за 1м3 - 1000 грн</span>
@@ -1142,16 +1107,16 @@
           </div>
         </div>
         <div class="special__desc">
-          <div class="special__num">6</div>
+          <div class="special__num">5</div>
           <h3 class="special__name-wallpaper">
             Коллекция обоев «Boys and Girls 6» от компании «A.S. Création»
           </h3>
           <span class="special__manufacturer">Производитель: Германия</span>
           <p class="special__desc-text">
             Эта коллекция может предложить обои на любой вкус – от милых до
-            стильных: милые животные, смешные комические фигуры, стильные граффити
-            или яркая городская жизнь. Отправляйтесь с Вашими детьми в настоящее
-            путешествие!
+            стильных: милые животные, смешные комические фигуры, стильные
+            граффити или яркая городская жизнь. Отправляйтесь с Вашими детьми в
+            настоящее путешествие!
           </p>
           <span class="special__warranty">20 лет гарантии и носки</span>
           <span class="special__price">Цена за 1м3 - 1000 грн</span>
@@ -1253,14 +1218,23 @@
         <div class="contacts__item contacts__item--marker">
           м.Київ, вул.Інженерна, 2 (м.Видубичі)
         </div>
+        <div class="contacts__item contacts__item--mobile contacts__item--phone">
+          (068)096-98-98 (093)096-98-98
+        </div>
         <div class="contacts__item contacts__item--marker">
           м.Київ, вул.Срібнокільська, 12 (м.Позняки)
+        </div>
+        <div class="contacts__item contacts__item--mobile contacts__item--phone">
+          (095)583-88-33 (098)583-88-33
         </div>
         <div class="contacts__item contacts__item--marker">
           с.Петропавлівська Борщагівка, вул. Білоцерківська, 5
         </div>
+        <div class="contacts__item contacts__item--mobile contacts__item--phone">
+          (098)888-19-91 (063)888-19-91
+        </div>
       </div>
-      <div class="contacts__row">
+      <div class="contacts__row contacts__row--desktop">
         <div class="contacts__item contacts__item--phone">
           (068)096-98-98 (093)096-98-98
         </div>
@@ -1273,8 +1247,7 @@
       </div>
     </div>
   </div>
-  <div class="contacts__map img-responsive">
-  </div>
+  <div class="contacts__map img-responsive"></div>
 </section>
 
     </main>

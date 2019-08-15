@@ -6,10 +6,14 @@
   }
 
   &__wrap {
+    max-width: 300px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
     @include respond-to(desktop) {
       position: relative;
       max-width: 1040px;
-      margin: auto;
       padding-top: 90px;
       padding-left: 100px;
       padding-right: 100px;
@@ -38,44 +42,71 @@
   }
 
   &__range {
+    width: 100%;
+    height: 21px;
+    margin-bottom: 35px;
+    background-color: #fdfdf5;
     @include respond-to(desktop) {
-      width: 100%;
-      height: 21px;
-      margin-bottom: 35px;
-      background-color: #fdfdf5;
     }
   }
 
   &__bar {
-    @include respond-to(desktop) {
-      &--done {
-        position: relative;
-        width: 25%;
-        height: 21px;
-        background-color: #eadfba;
+    &--done {
+      position: relative;
+      width: 25%;
+      height: 21px;
+      background-color: #eadfba;
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: -15px;
-          right: 0;
-          width: 1px;
-          height: 50px;
-          background-color: #eadfba;
-        }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        right: 0;
+        width: 1px;
+        height: 50px;
+        background-color: #eadfba;
       }
+    }
+    @include respond-to(desktop) {
     }
   }
 
   &__question-block {
-    @include respond-to(desktop) {
-      &--active {
-        display: block;
-      }
+    &--active {
+      display: block;
+    }
 
-      &--hidden {
-        display: none;
-      }
+    &--hidden {
+      display: none;
+    }
+    @include respond-to(desktop) {
+    }
+  }
+
+  &__rooms-list {
+    margin-bottom: 20px;
+
+    @include respond-to(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__rooms-list--type &__rooms-row {
+    @include respond-to(desktop) {
+      justify-content: center;
+    }
+  }
+
+  &__rooms-list--type &__label--vip {
+    @include respond-to(desktop) {
+      width: 100px;
+    }
+  }
+
+  &__rooms-list--type &__rooms-item {
+    padding-left: 38px;
+    @include respond-to(desktop) {
+      padding-left: 0;
     }
   }
 
@@ -88,7 +119,11 @@
   }
 
   &__rooms-list--time &__rooms-item {
+    padding-left: 40px;
+    margin-bottom: 20px;
+    
     @include respond-to(desktop) {
+      padding-left: 0;
       margin-bottom: 50px;
       width: 350px;
       font-size: 26px;
@@ -109,10 +144,13 @@
   }
 
   &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-family: "VogueHighline", serif;
+    font-size: 20px;
+    
     @include respond-to(desktop) {
-      display: block;
       margin-bottom: 65px;
-      font-family: "VogueHighline", serif;
       font-size: 26px;
 
       &--fourth {
@@ -125,51 +163,70 @@
   }
 
   &__rooms-item {
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    margin-bottom: 10px;
     font-weight: 300;
-
+    font-size: 17px;
+    
     @include respond-to(desktop) {
+      display: block;
       width: 25%;
-      font-size: 17px;
+      padding-left: 0;
+      margin-bottom: 0;
     }
   }
 
   &__rooms-item-img {
+    width: 50px;
+    height: 50px;
+
+    &--kitchen {
+      background: url(../img/poll/poll-kitchen.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
+    &--canteen {
+      background: url(../img/poll/poll-canteen.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
+    &--corridor {
+      background: url(../img/poll/poll-corridor.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
+    &--livingroom {
+      background: url(../img/poll/poll-livingroom.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
+    &--bedroom {
+      background: url(../img/poll/poll-bedroom.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
+    &--office,
+    &--vip {
+      background: url(../img/poll/poll-office.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
+    &--children {
+      background: url(../img/poll/poll-children.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
+    &--other {
+      background: url(../img/poll/poll-other.png) 100% 100% no-repeat;
+      background-size: cover;
+    }
+
     @include respond-to(desktop) {
       width: 125px;
       height: 125px;
       margin-bottom: 20px;
-
-      &--kitchen {
-        background: url(../img/poll/poll-kitchen.png) 100% 100% no-repeat;
-      }
-
-      &--canteen {
-        background: url(../img/poll/poll-canteen.png) 100% 100% no-repeat;
-      }
-
-      &--corridor {
-        background: url(../img/poll/poll-corridor.png) 100% 100% no-repeat;
-      }
-
-      &--livingroom {
-        background: url(../img/poll/poll-livingroom.png) 100% 100% no-repeat;
-      }
-
-      &--bedroom {
-        background: url(../img/poll/poll-bedroom.png) 100% 100% no-repeat;
-      }
-
-      &--office {
-        background: url(../img/poll/poll-office.png) 100% 100% no-repeat;
-      }
-
-      &--children {
-        background: url(../img/poll/poll-children.png) 100% 100% no-repeat;
-      }
-
-      &--other {
-        background: url(../img/poll/poll-other.png) 100% 100% no-repeat;
-      }
     }
   }
 
@@ -209,58 +266,64 @@
   }
 
   &__btn {
-    display: flex;
-    justify-content: center;
     padding: 0;
-    height: 40px;
-    width: 276px;
-    margin: auto;
+
+    @include respond-to(desktop) {
+      padding: 0;
+    }
   }
 
   &__form {
+    position: relative;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #eadfba;
+    border-radius: 20px;
+    z-index: 10;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      height: 100%;
+      width: 100%;
+      border: 1px solid #eadfba;
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+    &::after {
+      left: 10px;
+    }
+
     @include respond-to(desktop) {
-      position: relative;
       width: 430px;
       padding-top: 45px;
       padding-bottom: 35px;
       padding-left: 35px;
       padding-right: 35px;
       margin-left: auto;
-      margin: auto;
-      border: 1px solid #eadfba;
-      border-radius: 20px;
-      z-index: 10;
-      
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 5px;
-        height: 100%;
-        width: 100%;
-        border: 1px solid #eadfba;
-        border-radius: 20px;
-        z-index: -1;
-      }
-
-      &::after {
-        left: 10px;
-      }
     }
   }
 
   &__form-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include respond-to(desktop) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
   }
 
   &__form-input {
+    margin-bottom: 15px;
+
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+    
     @include respond-to(desktop) {
-      margin-bottom: 15px;
       padding-left: 30px;
 
       &:nth-child(2) {

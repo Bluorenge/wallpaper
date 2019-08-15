@@ -1,5 +1,8 @@
 .footer {
+	display: none;
+
   @include respond-to(desktop) {
+		display: block;
 		padding-bottom: 15px;
     background-color: #fdfcef;
   }

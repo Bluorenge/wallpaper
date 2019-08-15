@@ -1,6 +1,7 @@
 .promo {
   background: url(../img/promo-bg-mobile.jpg) 100% 100% no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 
   @include respond-to(desktop) {
     width: 100%;
@@ -118,13 +119,15 @@
 
   &__text {
     width: 300px;
-    margin: 0;
+    margin: auto;
     margin-bottom: 35px;
     text-align: center;
     font-weight: 100;
     color: $brown-text-color;
-
+    
     @include respond-to(desktop) {
+      margin: 0;
+      margin-bottom: 35px;
       width: 500px;
       font-size: 26px;
       text-align: left;
